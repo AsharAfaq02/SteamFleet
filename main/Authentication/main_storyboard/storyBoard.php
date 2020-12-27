@@ -2,10 +2,10 @@
 session_start();
 
 
-$servername = "127.0.0.1";
-              $username = "root";
-              $password = "Foofoo1234";     
-              $dbname = "asharsdata";
+$servername = "IP";
+              $username = "";
+              $password = "";     
+              $dbname = "";
               $conn = new mysqli($servername, $username, $password, $dbname);
               
               if ($conn->connect_error) {
