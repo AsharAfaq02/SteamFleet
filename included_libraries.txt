@@ -1,0 +1,10 @@
+nom packages:
+npm install animate.css --save
+npm i bootstrap
+
+JS libraries
+Jquery
+Bootstrap
+Bounce.js
+React.js
+Node.js
