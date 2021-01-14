@@ -321,9 +321,11 @@ session_start();
             <?php 
             
             
-            if(isset($_SESSION['duplicate'])== 1){
+            if($_SESSION['duplicate']== 1){
               echo "<h1 style = 'color:red; font-size 15px; text-align: center'>Email already exists, Log In?</h1>";
-              $_SESSION['duplicate']= 0;
+             $_SESSION['duplicate']= 0;
+            } else{
+             $_SESSION['duplicate']= 0;
             }
            
            
