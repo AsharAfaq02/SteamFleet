@@ -52,14 +52,19 @@ $servername = "127.0.0.1";
               if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
               }
-
-             $query = "SELECT FirstName FROM ArchLogin WHERE Email = '".$_SESSION['email']."';";
+$email_user = $_SESSION['email'];
+             $query = "SELECT FirstName FROM ArchLogin WHERE Email = '".$email_user."';";
       if ($result = mysqli_query($conn, $query)) {
           $row = mysqli_fetch_row($result); 
             $rowval = "$row[0]";
 
-          echo "<h1 style = 'text-align: center; font-size: 2vw; color: navy;'>Welcome, $rowval</h1>";       
-}
+          echo "<h1 style = 'text-align: center; font-size: 2vw; color: navy;'>Welcome, $rowval</h1>";
+
+            }
+
+            if($email_user == ''){
+              header("Location:/main/Authentication/loginonly.php");
+            }
         mysqli_close($conn);
                 
 
